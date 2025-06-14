@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Context } from '../context/ThemeContext';
 
 function Home() {
-
     const {theme, toggleTheme} = useContext(Context);
 
     const style = {
