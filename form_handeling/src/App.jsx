@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+import "./App.css"
 
 function App() {
 
@@ -11,7 +9,7 @@ const [user,setUser] = useState(
     lname:"",
     email:"", 
     pnumber:"",
-    password:""
+    password:"",
   }
 )
 
@@ -21,31 +19,33 @@ const handleSubmit = (e) => {
 
 const handleInputChange =(e)=>{
     const {name,value} = e.target;
-    setUser((prev)={...prev,[name]:value})
+    setUser((prev)=({...prev,[name]:value}));
 }
   return (
     <>
-    <h2>My name is {user.fname} {user.lname}. And my phone </h2>
+    <h2>My name is {user.fname} {user.lname}. And my phone number and email is {user.pnumber} and {user.email}.</h2>
      <form >
         <div>
           <label>First Name:</label>
           <input 
             type="text" 
-            name='fname' 
-            placeholder='First Name' 
+            name="fname" 
+            placeholder="First Name" 
             onChange={handleInputChange}
             value={user.fname}
+            required
           /> 
             
             <br /> <br />
 
           <label>Last Name:</label>
-          <input 
+          <input   
             type="text" 
-            name='lname' 
-            placeholder='Last Name' 
+            name="lname" 
+            placeholder="Last Name" 
             onChange={handleInputChange}
             value={user.lname}
+            required
           /> 
           
           <br /> <br />
@@ -53,10 +53,11 @@ const handleInputChange =(e)=>{
           <label>Email:</label>
           <input 
             type="email" 
-            name='email' 
-            placeholder='example123.gmail.com' 
-            value={yser.email}
+            name="email" 
+            placeholder="example123.gmail.com" 
+            value={user.email}
             onChange={handleInputChange}
+            required
             /> 
             
             <br /> <br />
@@ -64,11 +65,12 @@ const handleInputChange =(e)=>{
           <label>Phone Number:</label>
           <input 
             type="text" 
-            name='pnumber' 
-            placeholder='98********' 
+            name="pnumber" 
+            placeholder="98********" 
             onChange={handleInputChange}
             value={user.pnumber}
             pattern="[0-9]{10}"
+            required
             /> 
             
             <br /> <br />
@@ -76,10 +78,11 @@ const handleInputChange =(e)=>{
           <label>Password:</label>
           <input 
             type="password" 
-            name='password' 
-            placeholder='example123.gmail.com' 
+            name="password" 
+            placeholder="example123.gmail.com" 
             onChange={handleInputChange}
             value={user.password}
+            required
             /> 
             
             <br /> <br />
