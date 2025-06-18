@@ -1,7 +1,7 @@
 
 
 function Logout() {
-
+    // Clear user data from localStorage
     localStorage.removeItem("userData");
 
     // Redirect to login
