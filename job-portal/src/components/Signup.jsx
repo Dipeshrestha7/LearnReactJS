@@ -19,6 +19,7 @@ function Signup() {
     setUser((prev) => ({ ...prev, [name]: value }));
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -47,8 +48,7 @@ function Signup() {
       confirmPassword: '',
     });
 
-    // Optional redirect to login
-    nagivate('/login'); // Corrected navigation to login page
+    nagivate('/login'); 
 
   };
 

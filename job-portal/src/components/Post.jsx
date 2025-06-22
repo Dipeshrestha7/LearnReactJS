@@ -97,7 +97,7 @@ function Post() {
           className="border w-full px-3 py-2 rounded"
           rows="4"
           required
-        ></textarea>
+        />
 
         <button
           type="submit"
