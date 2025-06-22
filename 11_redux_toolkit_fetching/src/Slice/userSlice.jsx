@@ -8,7 +8,7 @@ export const userSlice = createSlice({
         error:null
     },
     reducers:{
-        fetchUsersStart:(state,action) =>{
+        fetchUsersStart:(state) =>{
             state.loading=true;
             state.error =null
         },
