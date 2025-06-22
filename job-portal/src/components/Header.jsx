@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Header() {
   return (
     <header className="bg-white shadow-md">
-      <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <nav className="max-w-6xl mx-auto px-4 py-9 flex justify-between items-center">
         <h1 className="text-xl font-bold text-blue-600">JobPortal</h1>
         <ul className="flex gap-6 text-gray-700 font-medium">
           <li>
@@ -32,6 +32,8 @@ function Header() {
               Dashboard
             </NavLink>
           </li>
+        </ul>
+        <ul  className="flex gap-6 text-gray-700 font-medium">
           <li>
             <NavLink to="/login" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "hover:text-blue-500"}>
               Login

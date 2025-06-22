@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Corrected import statement
+
 
 function Signup() {
+    
+    const nagivate = useNavigate();
+
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -43,7 +48,8 @@ function Signup() {
     });
 
     // Optional redirect to login
-    window.location.href = '/login';
+    nagivate('/login'); // Corrected navigation to login page
+
   };
 
   return (
